@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+			 x:Class="iOSDelayTouches.Views.TableViewPage">
+    <TableView Intent="Settings" HasUnevenRows="True">
+        <TableRoot>
+            <TableSection Title="Settings" >
+                <ViewCell>
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="400,Auto,400,*">
+                        <toolkit:DrawingView
+				            x:Name="Drawing"
+				            Grid.ColumnSpan="2"
+				            IsMultiLineModeEnabled="True" />
+                        <Button
+				            Grid.Row="1"
+				            Clicked="ClearClicked"
+				            Text="Clear" />
+                        <Button
+				            Grid.Row="1"
+				            Grid.Column="1"
+				            Clicked="SaveClicked"
+				            Text="Save" />
+                        <Image
+				            x:Name="GeneratedImage"
+				            Grid.Row="2"
+				            Grid.ColumnSpan="2" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.ColumnSpan="2"
+                            Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."/>
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
